@@ -18,7 +18,10 @@ fn(helloTom);
 
 //  bind
     // thisや引数の参照先を変更。使用時点で関数を実行しない
-    // bindに引数をつけることで、thisの参照先がpersonになる
+    // 関数内でthisが使用されていない場合、bindの第一引数を設定する必要がないので、null
+    // bindに引数をつけることで、thisの参照先がpersonになる(引数を束縛できる)
+    
+
 
 function a() {
     console.log("hello " + this.name);
