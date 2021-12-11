@@ -18,9 +18,8 @@ fn(helloTom);
 
 //  bind
     // thisや引数の参照先を変更。使用時点で関数を実行しない
-    // 関数内でthisが使用されていない場合、bindの第一引数を設定する必要がないので、null
+    // 関数内でthisが使用されていない場合、bindの第一引数を設定する必要がないので、nullを
     // bindに引数をつけることで、thisの参照先がpersonになる(引数を束縛できる)
-    
 
 
 function a() {
@@ -28,7 +27,7 @@ function a() {
 }
 
 const b = a.bind({name: "Tim"});
-b();
+// b();
 
 // call, apply
     // thisや引数の参照先を変更。同時に関数を実行する。
@@ -42,10 +41,10 @@ function c() {
 const taro = {name: "Taro"}
 
 const d = c.bind(taro);
-d();
+// d();
 
-c.apply(taro);
-c.call(taro)
+// c.apply(taro);
+// c.call(taro)
 
 const arry = [1,2,3,4,5]
 
